@@ -1,0 +1,150 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-image: url('./Images/floral.avif'); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #4b2c34;
+  line-height: 1.6;
+}
+
+/* Header styles */
+.main-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 228, 236, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #f4a5b5;
+  color: #a03a59;
+}
+
+.main-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  color: #6d3b4c;
+}
+
+/* Month section styling */
+.month-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid #f9d6df;
+  flex-wrap: wrap;
+}
+
+/* Alternating layout */
+.month-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Themed backgrounds for each month */
+.month-section.august     { background-color: rgba(255, 230, 240, 0.85); }
+.month-section.september  { background-color: rgba(255, 220, 235, 0.85); }
+.month-section.october    { background-color: rgba(255, 215, 225, 0.85); }
+.month-section.november   { background-color: rgba(255, 235, 240, 0.85); }
+.month-section.december   { background-color: rgba(250, 220, 235, 0.85); }
+.month-section.january    { background-color: rgba(255, 240, 245, 0.85); }
+.month-section.february   { background-color: rgba(255, 230, 240, 0.85); }
+.month-section.march      { background-color: rgba(255, 235, 250, 0.85); }
+.month-section.april      { background-color: rgba(250, 225, 235, 0.85); }
+.month-section.may        { background-color: rgba(255, 228, 239, 0.85); }
+.month-section.june       { background-color: rgba(255, 225, 235, 0.85); }
+.month-section.july       { background-color: rgba(255, 232, 242, 0.85); }
+
+/* Image styling */
+.image-box {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.03);
+}
+
+/* Special month tweaks */
+.image-box.october img {
+  object-position: top;
+}
+
+.image-box.june img {
+  transform: scale(0.95);
+}
+
+/* Text content */
+.text-box {
+  flex: 1 1 50%;
+  background: rgba(255, 255, 255, 0.93);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-box h2 {
+  font-size: 2.5rem;
+  color: #a03a59;
+  margin-bottom: 15px;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  color: #5e2a3c;
+}
+
+/* Continued section */
+.to-be-continued {
+  background-color: rgba(255, 240, 255, 0.9);
+}
+
+.to-be-continued .text-box h2 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .month-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .month-section.reverse {
+    flex-direction: column;
+  }
+
+  .image-box img,
+  .text-box {
+    max-width: 100%;
+  }
+
+  .text-box {
+    text-align: center;
+  }
+}
