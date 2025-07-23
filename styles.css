@@ -128,6 +128,32 @@ body {
   font-weight: normal;
 }
 
+#main-anniversary,
+#gifts-section {
+  transition: all 0.4s ease;
+}
+.nav-button-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.nav-button-wrapper button {
+  background-color: #ffb6c1;
+  color: #5a2a40;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.nav-button-wrapper button:hover {
+  background-color: #f191ac;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .month-section {
